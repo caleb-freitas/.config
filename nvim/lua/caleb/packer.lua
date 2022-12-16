@@ -14,6 +14,9 @@ packer.startup(function(use)
   -- Neovim statusline written in Lua
   use "nvim-lualine/lualine.nvim"
 
+  -- Improve startup time for Neovim
+  use "lewis6991/impatient.nvim"
+
   -- Adds VSCode-like pictograms to neovim built-in lsp
   use "onsails/lspkind-nvim"
 
@@ -41,6 +44,9 @@ packer.startup(function(use)
   -- Designed to make you better at Vim Movements
   use "ThePrimeagen/vim-be-good"
 
+  -- Automatically set up lspconfig for rust-analyzer
+  use "simrat39/rust-tools.nvim"
+
   -- Easily install and manage LSP servers, DAP servers, linters, and formatters
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
@@ -54,9 +60,15 @@ packer.startup(function(use)
   use "windwp/nvim-ts-autotag"
 
   -- Completion engine for neovim written in Lua
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lsp-signature-help"
+  use "hrsh7th/cmp-nvim-lua"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-vsnip"
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/vim-vsnip"
+  use "L3MON4D3/LuaSnip"
 
   -- treesitter-based highlighting
   use ("nvim-treesitter/nvim-treesitter", {

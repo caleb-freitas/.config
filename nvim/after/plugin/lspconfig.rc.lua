@@ -82,7 +82,6 @@ nvim_lsp.hls.setup {
 }
 
 -- astro
-
 nvim_lsp.astro.setup {
   on_attach = on_attach,
   capabilities = capabilities
@@ -96,6 +95,12 @@ nvim_lsp.prismals.setup{
 
 -- tailwindcss
 nvim_lsp.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+-- rust
+nvim_lsp.rust_analyzer.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
