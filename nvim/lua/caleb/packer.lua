@@ -47,6 +47,11 @@ packer.startup(function(use)
   -- Automatically set up lspconfig for rust-analyzer
   use "simrat39/rust-tools.nvim"
 
+  -- Debug Adapter Protocol client implementation for Neovim
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
+  use "ravenxrz/DAPInstall.nvim"
+
   -- Easily install and manage LSP servers, DAP servers, linters, and formatters
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"

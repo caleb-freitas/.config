@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 vim.opt.background = "dark"
 
-vim.opt.guicursor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
