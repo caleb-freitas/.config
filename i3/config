@@ -152,3 +152,26 @@ bar {
         position top
         status_command i3status
 }
+
+###### MY PERSONAL SETUP STARTS WHERE ######
+
+# Hide window title bar
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1
+
+# Switch keyboard layouts
+exec "setxkbmap -layout us,br"
+exec "setxkbmap -option 'grp:ctrl_alt_toggle'"
+
+exec --no-startup-id xautolock -time 15 -corners 0-0- -cornersize 1000 -locker blurlock
+
+# Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
