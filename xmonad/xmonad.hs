@@ -30,7 +30,7 @@ myConfig = def
     }
   `additionalKeysP`
     [ ("M-S-z", spawn "xscreensaver-command -lock")
-    , ("M-C-s", unGrab *> spawn "scrot -s"        )
+    , ("M-S-s", unGrab *> spawn "scrot -s -f '/home/caleb/Pictures/Screenshots/$(date +%Y%m%d%H%M%S).png'"        )
     , ("M-f"  , spawn "firefox"                   )
     ]
 
