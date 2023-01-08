@@ -24,14 +24,17 @@ main = xmonad
      $ myConfig
 
 myConfig = def
-    { modMask    = mod1Mask      -- Rebind Mod to the Super key
+    { modMask    = mod4Mask      -- Rebind Mod to the Super key
     , layoutHook = myLayout      -- Use custom layouts
     , manageHook = myManageHook  -- Match on certain windows
+    , terminal = "alacritty"
     }
   `additionalKeysP`
     [ ("M-S-z", spawn "xscreensaver-command -lock")
     , ("M-S-s", unGrab *> spawn "scrot -s -f '/home/caleb/Pictures/Screenshots/$(date +%Y%m%d%H%M%S).png'"        )
-    , ("M-f"  , spawn "firefox"                   )
+    , ("M-f"  , spawn "firefox")
+    , ("<Mod-Enter>"  , spawn "alacritty")
+    , ("M-o"  , spawn "flatpak run md.obsidian.Obsidian")
     ]
 
 myManageHook :: ManageHook
